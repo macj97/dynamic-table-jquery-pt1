@@ -6,17 +6,19 @@
  * Copyright (c) 2026 by Joe Plummer. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author.
  */
 
-
+// start of JQuery 
 $(document).ready(function() {
     
+    // adding method "isMinLEMax" to compare the min value with the max value
     jQuery.validator.addMethod("isMinLEMax", function(value, element, param) {
         const max = Number(value);
-        // console.log("Max is: ",max);
+        // console.log("Max is: ",max); // debugging
         const min = Number($(param).val());
-        // console.log("Min is: ",min);
+        // console.log("Min is: ",min); // debugging
         return (min <= max);
     });
     
+    // validating #formID of index.html
     $("#formID").validate({
         rules: {
             mincolval: {
@@ -67,12 +69,18 @@ $(document).ready(function() {
             }
         },
         submitHandler: function(form) {
-            console.log("inside submitHandler...");
+            // console.log("inside submitHandler..."); // debugging
             buildTable();
         }
 
     });
 
+    /**
+     * Function buildTable() builds the dynamic table given user inputs
+     * @param   N/A
+     * @return  N/A
+     * @throws  N/A
+     */
     function buildTable() {
         // building the table
 
