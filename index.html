@@ -23,31 +23,31 @@ Copyright (c) 2026 by Joe Plummer. All rights reserved. May be freely copied or 
 
         <div id="Form">
             <h2>Please enter the table ranges.</h2>
-            <form>
+            <form id="formID">
                 <div class="form-row">
                     <label for="mincolval">Minimum Column Value:</label>
                     <input type="text" id="mincolval" name="mincolval" 
-                        value="0" required autofocus><br>
+                        required autofocus><br>
                 </div>
 
                 <div class="form-row">
                     <label for="maxcolval">Maximum Column Value:</label>
                     <input type="text" id="maxcolval" name="maxcolval" 
-                        value="4" required><br>
+                        required><br>
                 </div>
 
                 <div class="form-row">
                     <label for="minrowval">Minimum Row Value:</label>
                     <input type="text" id="minrowval" name="minrowval" 
-                        value="0" required><br>
+                        required><br>
                 </div>
                 
                 <div class="form-row">
                     <label for="maxrowval">Maximum Row Value:</label>
                     <input type="text" id="maxrowval" name="maxrowval" 
-                        value="4" required><br>
+                        required><br>
                 </div>
-                <input type="button" id="submit-btn" value="Submit">
+                <input type="submit" id="submit-btn" value="Submit">
                 <!-- <input type="reset" value="Reset"><br> -->
             </form>
         </div>
@@ -58,8 +58,8 @@ Copyright (c) 2026 by Joe Plummer. All rights reserved. May be freely copied or 
 
         <!-- scripts -->
         <!-- <script src="js/script_jquery.js"></script> -->
-        <script src="jquery.js"></script>
-        <script src="jquery.validate.js"></script> 
+        <script src="jquery-validation-1.19.5/dist/jquery.validate.js"></script> 
+        <script src="jquery-validation-1.19.5/dist/additional-methods.js"></script>
         <script src="js/script_jquery.js"></script>
 
     </body>
