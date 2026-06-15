@@ -9,16 +9,7 @@
 // start of JQuery 
 $(document).ready(function() {
     
-    // adding method "isMinLEMax" to compare the min value with the max value
-    jQuery.validator.addMethod("isMinLEMax", function(value, element, param) {
-        const max = Number(value);
-        // console.log("Max is: ",max); // debugging
-        const min = Number($(param).val());
-        // console.log("Min is: ",min); // debugging
-        return (min <= max);
-    });
-    
-    // validating #formID of index.html
+    // validate #formID of index.html
     $("#formID").validate({
         rules: {
             mincolval: {
@@ -75,6 +66,31 @@ $(document).ready(function() {
 
     });
 
+    // adding method "isMinLEMax" to compare the min value with the max value
+    jQuery.validator.addMethod("isMinLEMax", function(value, element, param) {
+        const max = Number(value);
+        // console.log("Max is: ",max); // debugging
+        const min = Number($(param).val());
+        // console.log("Min is: ",min); // debugging
+        return (min <= max);
+    });
+
+    // variables for user input
+    let minColNum, maxColNum, minRowNum, maxRowNum;
+
+    /**
+     * Function getInputs gets the inputs from the user
+     * @param   N/A
+     * @return  N/A
+     * @throws  N/A
+     */
+    function getInputs() {
+        minColNum = Number(document.getElementById("mincolval").value);
+        maxColNum = Number(document.getElementById("maxcolval").value);
+        minRowNum = Number(document.getElementById("minrowval").value);
+        maxRowNum = Number(document.getElementById("maxrowval").value);
+    } 
+
     /**
      * Function buildTable() builds the dynamic table given user inputs
      * @param   N/A
@@ -84,13 +100,9 @@ $(document).ready(function() {
     function buildTable() {
         // building the table
 
-        console.log("building table...");  // debugging
-
         // variables
-        minColNum = document.getElementById("mincolval").value;
-        maxColNum = document.getElementById("maxcolval").value;
-        minRowNum = document.getElementById("minrowval").value;
-        maxRowNum = document.getElementById("maxrowval").value;
+        getInputs();
+
         let table_container = document.getElementById("Table-container"); // container of the table element
         table_container.innerHTML = ""
         const dTable = document.createElement("table");
