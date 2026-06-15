@@ -60,7 +60,6 @@ $(document).ready(function() {
             }
         },
         submitHandler: function(form) {
-            // console.log("inside submitHandler..."); // debugging
             buildTable();
         }
 
