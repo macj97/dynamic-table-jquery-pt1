@@ -68,9 +68,7 @@ $(document).ready(function() {
     // adding method "isMinLEMax" to compare the min value with the max value
     jQuery.validator.addMethod("isMinLEMax", function(value, element, param) {
         const max = Number(value);
-        // console.log("Max is: ",max); // debugging
         const min = Number($(param).val());
-        // console.log("Min is: ",min); // debugging
         return (min <= max);
     });
 
