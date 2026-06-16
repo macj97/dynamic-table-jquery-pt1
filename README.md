@@ -5,4 +5,4 @@ Using the jQuery Plugin to validate user inputs for the Dynamic Table. Assignmen
 https://macj97.github.io/dynamic-table-jquery-pt1/
 
 ## Github Repository:
-https://github.com/macj97/dynamic-table-jquery-pt1
+https://github.com/macj97/dynamic-table-jquery-pt1/tree/gh-pages
